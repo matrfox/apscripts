@@ -17,9 +17,11 @@ Course Types
  var englishSpeakingStudy = false;
  var englishSpeaking = false;
  var policeNeeded = false;
+ var params = new System.Collections.Generic.Dictionary.<System.String, System.Object>();
+ params.Add("English Speaking", 1);
 
 function CheckEnglish(){
 if (englishSpeakingNationality == true || englishSpeakingStudy == true){ englishSpeaking = true;}
 }
 
-
+Debug.Log(Analytics.Analytics.CustomEvent("English Speaking", params));
