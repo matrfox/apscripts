@@ -1,9 +1,11 @@
-﻿
+
 var turnCounterValue : GameObject;
 
 var self : TextMesh;
- var params = new System.Collections.Generic.Dictionary.<System.String, System.Object>();
- params.Add("Game Complete", 1);
+
+var params = new System.Collections.Generic.Dictionary.<System.String, System.Object>();
+params.Add("Final Score", turnCounterValue.GetComponent(TurnCounter)); 
+
 
 function GetResult(){
 self.text = "Your score was " + (turnCounterValue.GetComponent(TurnCounter).counterValue.ToString()) + "!";
@@ -11,7 +13,7 @@ self.text = "Your score was " + (turnCounterValue.GetComponent(TurnCounter).coun
 //Application.LoadLevel("Menu");
 }
 
-Analytics.Analytics.CustomEvent("Game Complete", params);
+Analytics.Analytics.CustomEvent("Final Score", params); 
 
 function OnMouseOver(){
 	if (Input.GetMouseButtonDown(0)){
