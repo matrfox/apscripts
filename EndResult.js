@@ -4,7 +4,7 @@ var turnCounterValue : GameObject;
 var self : TextMesh;
 
 var params = new System.Collections.Generic.Dictionary.<System.String, System.Object>();
-params.Add("Final Score", turnCounterValue.GetComponent(TurnCounter)); 
+params.Add("Final Score", turnCounterValue.GetComponent(TurnCounter).counterValue.ToString()); 
 
 
 function GetResult(){
