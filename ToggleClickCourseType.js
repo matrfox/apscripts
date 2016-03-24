@@ -30,6 +30,15 @@ function Start(){
     toggle6Graphic = GameObject.Find("FE_Toggle/SelectedGraphic");
 }
 
+Analytics.CustomEvent("Course Level", new Dictionary <string, object> {
+{ "toggle1Selected", 1},
+{ "toggle2Selected", 1},
+{ "toggle3Selected", 1},
+{ "toggle4Selected", 1},
+{ "toggle5Selected", 1},
+{ "toggle6Selected", 1},
+} ); 
+
 function PlaySound(){
     if (soundSwitch == false){
         soundSwitch = true;
